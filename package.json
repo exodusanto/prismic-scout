@@ -1,0 +1,20 @@
+{
+  "name": "prismic-scout",
+  "version": "0.1.0",
+  "description": "Extract data from Prismic query methods results object",
+  "main": "index.js",
+  "repository": "https://github.com/exodusanto/prismic-scout",
+  "author": "Antonio Dal Sie <info@antoniodalsie.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint {**/,}*.js",
+    "lint:fix": "eslint {**/,}*.js --fix"
+  },
+  "dependencies": {
+    "prismic-dom": "^2.0.2",
+    "prismic-javascript": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1"
+  }
+}
