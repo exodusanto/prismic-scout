@@ -57,6 +57,6 @@ Scout.retriveFromData(results, {
 })
 ```
 
-##License
+## License
 
 This project is under MIT license, 2017, ⓒ Antonio Dal Sie. Read more in LICENSE.
