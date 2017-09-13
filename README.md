@@ -1,21 +1,30 @@
-# PrisimicScout
-This package extract data from Prisimic Query Results using a JSON like GraphQL style
+# PrismicScout
+This package extract data from Prismic Query Results using a JSON like GraphQL style
 
 ## Install
 
 ```bash
-npm install prisimic-scout --save
+npm install prismic-scout --save
 ```
 
 or
 
 ```bash
-yarn add prisimic-scout
+yarn add prismic-scout
 ```
 
 ## Documentation
 
 ### Instance
+
+```js
+restriveFromData(
+    Object <api>,
+    Object <options> 
+)
+```
+
+#### example
 
 ```js
 const PrismicScout = require('prismic-scout');
@@ -31,10 +40,13 @@ const Scout = new PrismicScout(api);
 
 ### retriveFromData
 
+For array of documents
+
 ```js
 restriveFromData(
     Array <results>,
-    Object <fileds> 
+    Object <fileds>,
+    Object <options>
 )
 ```
 
@@ -42,9 +54,40 @@ restriveFromData(
 
 ```js
 /*
- * Inside a Prismic Query
+ * Inside a Prismic `query` then function
  */
 Scout.retriveFromData(results, {
+    "title": {
+        "_type": "text"
+    },
+    "description": {
+        "_type": "html"
+    },
+    "image": {
+        "url": {}
+    }
+})
+```
+
+### retriveSingle
+
+For single of document
+
+```js
+restriveFromData(
+    Object <doc>,
+    Object <fileds>,
+    Object <options>
+)
+```
+
+#### example
+
+```js
+/*
+ * Inside a Prismic `getByID` then function
+ */
+Scout.retriveSingle(doc, {
     "title": {
         "_type": "text"
     },
@@ -55,6 +98,36 @@ Scout.retriveFromData(results, {
         "url": {}
     }
 })
+```
+
+## Options
+
+### `clean` (default: true)
+Extract from document data field and append 'id','uid' and 'lang';
+
+### `id` (default: true)
+Append id value to object (*without id Scout cannot retrive nested document*)
+
+### `uid` (default: true)
+Append uid value to object
+
+### `lang` (default: true)
+Append lang value to object
+
+#### example
+
+```js
+    /* Set global options */
+    const Scout = new PrismicScout(api, {uid: false, lang: false});
+
+    /* Set single options (merged with global options) */
+    Scout.retriveFromData(results, {
+        "title": {
+            "_type": 'html'
+        }
+    },{
+        lang: true // { uid: false, lang: true }
+    });
 ```
 
 ## License
