@@ -1,4 +1,6 @@
 # PrismicScout
+[![npm version](https://badge.fury.io/js/prismic-scout.svg)](http://badge.fury.io/js/prismic-scout)
+
 This package extract data from Prismic Query Results using a JSON like GraphQL style
 
 ## Install
