@@ -1,6 +1,6 @@
 {
   "name": "prismic-scout",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Extract data from Prismic query methods results object",
   "keywords": [
     "prismic",
@@ -17,7 +17,7 @@
     "lint:fix": "eslint {**/,}*.js --fix"
   },
   "dependencies": {
-    "prismic-dom": "2.0.0"
+    "prismic-dom": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.6.1"
