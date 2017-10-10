@@ -1,6 +1,6 @@
 {
   "name": "prismic-scout",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Extract data from Prismic query methods results object",
   "keywords": [
     "prismic",
