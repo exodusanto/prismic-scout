@@ -1,3 +1,3 @@
-const PrismicScout = require("./lib/PrismicScout");
+const ContentfulScout = require("./lib/ContentfulScout");
 
-module.exports = PrismicScout;
+module.exports = ContentfulScout;

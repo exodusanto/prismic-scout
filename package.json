@@ -1,15 +1,14 @@
 {
-  "name": "prismic-scout",
+  "name": "contentful-scout",
   "version": "0.3.8",
   "description": "Extract data from Prismic query methods results object",
   "keywords": [
-    "prismic",
+    "contentful",
     "scout",
-    "extract",
-    "prismic-dom"
+    "extract"
   ],
   "main": "index.js",
-  "repository": "https://github.com/exodusanto/prismic-scout",
+  "repository": "https://github.com/exodusanto/contentful-scout",
   "author": "Antonio Dal Sie <info@antoniodalsie.com>",
   "license": "MIT",
   "scripts": {
@@ -17,9 +16,10 @@
     "lint:fix": "eslint {**/,}*.js --fix"
   },
   "dependencies": {
-    "prismic-dom": "^2.0.0"
+    "contentful": "^5.0.1"
   },
   "devDependencies": {
+    "circular-json": "^0.4.0",
     "eslint": "^4.6.1",
     "prismic-javascript": "^1.3.0"
   }
