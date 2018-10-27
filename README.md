@@ -94,7 +94,7 @@ Scout.retriveSingle(doc, {
         "_type": "text"
     },
     "description": {
-        "_type": "richtext"
+        "_type": "html"
     },
     "image": {
         "url": {}
